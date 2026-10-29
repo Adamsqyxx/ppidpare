@@ -1,0 +1,242 @@
+@import "tailwindcss";
+
+/* =========================================================
+   PPID Kota Parepare — Design Tokens (sumber: DESIGN.md)
+   Tailwind CSS v4: token di @theme jadi utility class.
+   ========================================================= */
+@theme {
+  /* ---- Colors ---- */
+  --color-surface: #faf8ff;
+  --color-surface-dim: #d2d9f4;
+  --color-surface-bright: #faf8ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f3ff;
+  --color-surface-container: #eaedff;
+  --color-surface-container-high: #e2e7ff;
+  --color-surface-container-highest: #dae2fd;
+  --color-surface-variant: #dae2fd;
+  --color-surface-tint: #006d30;
+  --color-on-surface: #131b2e;
+  --color-on-surface-variant: #3f493f;
+  --color-inverse-surface: #283044;
+  --color-inverse-on-surface: #eef0ff;
+  --color-outline: #6f7a6e;
+  --color-outline-variant: #becabc;
+  --color-background: #faf8ff;
+  --color-on-background: #131b2e;
+
+  --color-primary: #00652c;
+  --color-primary-container: #15803d;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #d3ffd5;
+  --color-primary-fixed: #95f8a7;
+  --color-primary-fixed-dim: #79db8d;
+  --color-on-primary-fixed: #00210a;
+  --color-on-primary-fixed-variant: #005323;
+  --color-inverse-primary: #79db8d;
+
+  --color-secondary: #006c4e;
+  --color-secondary-container: #97f5cc;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #007353;
+  --color-secondary-fixed: #97f5cc;
+  --color-secondary-fixed-dim: #7bd8b1;
+  --color-on-secondary-fixed: #002115;
+  --color-on-secondary-fixed-variant: #00513a;
+
+  --color-tertiary: #4d586c;
+  --color-tertiary-container: #657085;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #f1f4ff;
+  --color-tertiary-fixed: #d8e3fb;
+  --color-tertiary-fixed-dim: #bcc7de;
+  --color-on-tertiary-fixed: #111c2d;
+  --color-on-tertiary-fixed-variant: #3c475a;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  /* ---- Typography ---- */
+  --font-headline: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --text-headline-2xl: 40px;
+  --text-headline-2xl--line-height: 48px;
+  --text-headline-2xl--letter-spacing: -0.025em;
+  --text-headline-2xl--font-weight: 700;
+
+  --text-headline-2xl-mobile: 30px;
+  --text-headline-2xl-mobile--line-height: 38px;
+  --text-headline-2xl-mobile--letter-spacing: -0.02em;
+  --text-headline-2xl-mobile--font-weight: 700;
+
+  --text-headline-xl: 32px;
+  --text-headline-xl--line-height: 40px;
+  --text-headline-xl--letter-spacing: -0.02em;
+  --text-headline-xl--font-weight: 700;
+
+  --text-headline-xl-mobile: 24px;
+  --text-headline-xl-mobile--line-height: 32px;
+  --text-headline-xl-mobile--letter-spacing: -0.015em;
+  --text-headline-xl-mobile--font-weight: 600;
+
+  --text-headline-lg: 24px;
+  --text-headline-lg--line-height: 32px;
+  --text-headline-lg--letter-spacing: -0.015em;
+  --text-headline-lg--font-weight: 600;
+
+  --text-headline-md: 20px;
+  --text-headline-md--line-height: 28px;
+  --text-headline-md--letter-spacing: -0.01em;
+  --text-headline-md--font-weight: 600;
+
+  --text-headline-sm: 18px;
+  --text-headline-sm--line-height: 26px;
+  --text-headline-sm--letter-spacing: -0.005em;
+  --text-headline-sm--font-weight: 600;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--font-weight: 400;
+
+  --text-body-sm: 14px;
+  --text-body-sm--line-height: 20px;
+  --text-body-sm--font-weight: 400;
+
+  --text-label-lg: 15px;
+  --text-label-lg--line-height: 20px;
+  --text-label-lg--font-weight: 500;
+
+  --text-label-md: 14px;
+  --text-label-md--line-height: 20px;
+  --text-label-md--font-weight: 500;
+
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--letter-spacing: 0.025em;
+  --text-label-sm--font-weight: 600;
+
+  --text-code-sm: 13px;
+  --text-code-sm--line-height: 18px;
+  --text-code-sm--font-weight: 400;
+
+  /* ---- Radius (mengikuti mockup) ---- */
+  --radius-sm: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  /* ---- Spacing scale tambahan ---- */
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-margin: 2rem;
+  --spacing-margin-mobile: 1rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2rem;
+  --spacing-space-2xl: 3rem;
+  --spacing-space-3xl: 4rem;
+}
+
+@layer base {
+  html {
+    /* Skala fon global — dikendalikan UtilityBar (A- / A / A+) */
+    font-size: 100%;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  html[data-font-scale="sm"] {
+    font-size: 87.5%;
+  }
+  html[data-font-scale="lg"] {
+    font-size: 112.5%;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 2px;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ---- Mode Kontras Tinggi (WCAG 2.2 AA) ---- */
+html[data-contrast="high"] body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+html[data-contrast="high"] :is(a, button, input, select, textarea) {
+  text-decoration-thickness: 2px;
+}
+
+html[data-contrast="high"]
+  :is(
+    .bg-surface,
+    .bg-surface-bright,
+    .bg-surface-container-lowest,
+    .bg-surface-container-low,
+    .bg-surface-container,
+    .bg-surface-container-high,
+    .bg-surface-container-highest,
+    .bg-surface-variant
+  ) {
+  background-color: #ffffff !important;
+}
+
+html[data-contrast="high"]
+  :is(
+    .text-on-surface,
+    .text-on-surface-variant,
+    .text-tertiary,
+    .text-primary,
+    .text-secondary
+  ) {
+  color: #000000 !important;
+}
+
+html[data-contrast="high"] img {
+  filter: grayscale(100%) contrast(115%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
